@@ -137,6 +137,14 @@ svg{
 	color: #151515;
 	/* display: flex;
 	align-items: center; */
+	transition-duration: 0.3s;
+}
+
+
+.btn:hover{
+	/* background-color: aquamarine; */
+	padding: 16px 32px;
+	/* font-size: 1rem; */
 }
 
 /* .sec-btn-wrapper{
@@ -227,6 +235,13 @@ svg{
 	.sm-links{
 		width: 100%;
 		justify-content: center;
+		
+	}
+
+	.sm-link:hover{
+		height: 26px;
+		width: 26px;
+		background-color: lawngreen;
 	}
 
 	svg{
@@ -246,7 +261,6 @@ svg{
 		display: none;
 	}
 	footer{
-		/* background-color: lightcoral; */
 		flex-direction: column-reverse;
 		bottom: 5%;
 		justify-content: space-between;
@@ -255,38 +269,7 @@ svg{
 	.btn{
 		position: relative;
 		bottom: 50px;
-		/* margin-bottom:  40px; */
 	}
-
-	/* footer{
-		position: fixed;
-		bottom : 0;
-		background-color: #151515;
-		width: 100%;
-		padding: 6% 1%;
-		display: flex;
-		justify-content: center;
-		border-radius: 15px 15px 0 0;
-		margin-bottom: 0;
-	}
-
-	.mob-sm-links{
-		width: 100%;
-		display: flex;
-		justify-content: space-around;
-	}
-
-	.mob-sm-link{
-		color : #ffffff;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	} */
-
-	/* .mob-sm-link:hover{
-		background-color: #FBB2C5;
-	} */
 
 	a{
 		text-decoration: none;

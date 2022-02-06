@@ -212,6 +212,20 @@ svg{
 		width: 100%;
 	}
 
+
+@media only screen and (max-width : 970px) and (min-width : 600px){
+	.centered_section{
+		display: none;
+	}
+	.btn{
+		background-color: aqua;
+	}
+
+	.btn-container{
+		width: 50%;
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	.centered_section{
 		display: none;
@@ -238,12 +252,7 @@ svg{
 		
 	}
 
-	.sm-link:hover{
-		height: 26px;
-		width: 26px;
-		background-color: lawngreen;
-	}
-
+	
 	svg{
 		margin: 0 20px;
 	}

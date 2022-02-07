@@ -1,3 +1,4 @@
+@import "./varaibles";
 @import "./hero_section";
 
 // Global Styles
@@ -6,9 +7,19 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: $primary_font;
 }
 
 body{
 	width: 100vw;
 	color: #ffffff;
+}
+
+main{
+	width: 100%;
+	background-image: url('/background.png');
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }

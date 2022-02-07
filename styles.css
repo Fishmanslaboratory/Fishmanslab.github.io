@@ -9,12 +9,11 @@ body{
 	width: 100vw;
 	font-family: 'Outfit', sans-serif;
 	color: #ffffff;
-	
 }
 
 main{
 	width: 100%;
-	background-image: url('Lab bg.png');
+	background-image: url('background.png');
 	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;

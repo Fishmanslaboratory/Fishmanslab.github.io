@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,CAAC,AAAA,CACA,UAAU,CAAE,UAAU,CACtB,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,AAED,AAAA,IAAI,AAAA,CACH,KAAK,CAAE,KAAK,CACZ,KAAK,CAAE,OAAO,CACd",
+    "sources": [
+        "../scss/stylesheet.scss",
+        "../scss/_hero_section.scss"
+    ],
+    "names": [],
+    "file": "stylesheet.min.css"
+}

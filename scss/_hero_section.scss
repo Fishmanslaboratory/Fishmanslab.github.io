@@ -51,9 +51,33 @@ nav{
 	align-items: center;
 }
 
+
+.hero_text_wrapper{
+	// background-color: lightcoral;
+	width: 90%;
+	max-height: 200px;
+}
+
 .hero_text{
-	font-size: 4rem;
+	font-size: 5rem;
 	font-weight: 800;
+	position: relative;
+	z-index: 9;
+	// top: 5;
+	
+}
+
+.hero_text_stroke{
+	
+  color: #ffffff;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffffff;
+  position: relative;
+  bottom: 195px;
+  right: 1.5px;
+  z-index: 1;
+
 }
 
 .biohazard_icon{

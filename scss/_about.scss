@@ -1,3 +1,61 @@
-.metaverse_bg{
-	
+.about-div1 {
+	text-align: center;
+	font-size: 45px;
+	font-weight: 900;
+	color: black;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding-top: 100px;
+}
+
+.about-div2 {
+    text-align: left;
+    padding-left: 3px;
+    font-size: 16px;
+    color: black;
+    padding-top: 100px;
+    padding: 100px;
+}
+
+.roadmap {
+    background-color: black;
+    padding: 75px;
+}
+
+.roadmap-heading {
+    font-size: 45px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+}
+
+.phase-card {
+	border-radius: 10px;
+	margin: 5px;
+	padding: 17px;
+	background-color: #191919;
+}
+
+.phase {
+	font-size: 18px;
+	font-weight: 900;
+	padding: 1px 0;
+}
+
+.phase-heading {
+	font-size: 24px;
+	font-weight: 900;
+	padding: 1px 0;
+}
+
+.phase-paragraph {
+	font-size: 12px;
+	font-weight: 400;
+	color: white;
+}
+
+.phase-card-row {
+    gap: 57px;
+    justify-content: center;
+    padding-top: 50px;
 }

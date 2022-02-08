@@ -1,0 +1,41 @@
+footer {
+  padding: 50px 100px;
+  background-color: #151515;
+  transform: translateY(25px);
+
+  h2 {
+    font-size: 4.3rem;
+  }
+
+  .email {
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+
+    &:hover {
+      border-bottom: 2px solid white;
+    }
+  }
+
+  .d-flex {
+    margin-top: 80px;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+    }
+
+    .social-links {
+      a {
+        text-decoration: none;
+        margin: 0 5px;
+
+        img {
+          height: 35px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+#creators {
+  h2 {
+    color: transparent;
+    font-size: 12rem;
+    font-family: Outfit, sans-serif;
+    font-weight: 900;
+    -webkit-text-stroke: 1.5px black;
+  }
+
+  .user-card-container {
+    transform: translateY(-170px);
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+  }
+
+  .user-card {
+    width: 400px;
+    color: #000;
+    text-align: center;
+
+    .profile {
+      width: 90%;
+    }
+
+    .name {
+      font-weight: 700;
+      font-size: 1.7rem;
+    }
+
+    .des {
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .d-flex {
+      justify-content: center;
+
+      a {
+        margin: 20px 17px 0 17px;
+
+        img {
+          height: 19px;
+        }
+      }
+    }
+  }
+}

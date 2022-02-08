@@ -1,61 +1,131 @@
 .about-div1 {
-	text-align: center;
-	font-size: 45px;
-	font-weight: 900;
-	color: black;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    padding-top: 100px;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 900;
+  color: black;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  padding-top: 100px;
 }
 
 .about-div2 {
-    text-align: left;
-    padding-left: 3px;
-    font-size: 16px;
-    color: black;
-    padding-top: 100px;
-    padding: 100px;
+  text-align: left;
+  padding-left: 3px;
+  font-size: 16px;
+  color: black;
+  padding-top: 100px;
+  padding: 100px;
 }
 
 .roadmap {
-    background-color: black;
-    padding: 75px;
-}
+  background-color: black;
+  padding: 75px;
 
-.roadmap-heading {
+  .roadmap-heading {
     font-size: 45px;
     font-weight: 900;
     color: white;
     text-align: center;
-}
+  }
 
-.phase-card {
-	border-radius: 10px;
-	margin: 5px;
-	padding: 17px;
-	background-color: #191919;
-}
-
-.phase {
-	font-size: 18px;
-	font-weight: 900;
-	padding: 1px 0;
-}
-
-.phase-heading {
-	font-size: 24px;
-	font-weight: 900;
-	padding: 1px 0;
-}
-
-.phase-paragraph {
-	font-size: 12px;
-	font-weight: 400;
-	color: white;
-}
-
-.phase-card-row {
-    gap: 57px;
+  .phase-card-row {
+    gap: 40px;
     justify-content: center;
     padding-top: 50px;
+  }
+
+  .phase-card {
+    width: 280px;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 35px 30px 17px 30px;
+    background-color: #191919;
+    position: relative;
+
+    .phase {
+      font-size: 18px;
+      font-weight: 900;
+      padding: 1px 0;
+      margin: 0;
+      // color: transparent;
+      // -webkit-text-stroke: 1px white;
+    }
+
+    .phase-heading {
+      height: 40px;
+      margin-top: 7px;
+      margin-bottom: 23px;
+    }
+
+    .phase-paragraph {
+      font-size: 12px;
+      font-weight: 400;
+      color: white;
+    }
+
+    &:nth-child(1) {
+      .fish {
+        height: 200px;
+        position: absolute;
+        top: -80px;
+        left: 55%;
+      }
+    }
+
+    &:nth-child(2) {
+      .fish {
+        height: 170px;
+        position: absolute;
+        bottom: -100px;
+        left: 75%;
+        z-index: 10;
+      }
+    }
+
+    &:nth-child(4) {
+      .fish {
+        height: 110px;
+        position: absolute;
+        top: -90px;
+        left: 0;
+      }
+    }
+  }
+
+  .biohazard {
+    margin-top: 100px;
+    position: relative;
+
+    .img-container {
+      display: flex;
+      justify-content: center;
+
+      img {
+        height: 500px;
+        filter: blur(13px);
+      }
+    }
+
+    .btn {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      img {
+        height: 90px;
+        cursor: pointer;
+        transition-duration: 1s;
+      }
+
+      p {
+        margin-top: 15px;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+      }
+    }
+  }
 }

@@ -1,26 +1,27 @@
 @import "./varaibles";
+@import "./fonts";
 @import "./hero_section";
 @import "./about";
+@import "./creators";
+@import "./footer";
 
 // Global Styles
 
-*{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	font-family: $primary_font;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-	width: 100vw;
-	color: #ffffff;
+body {
+  width: 100%;
+  color: #fff;
+  font-family: Outfit, sans-serif;
 }
 
-main{
-	width: 100%;
-	background-image: url('/background.png');
-	height: 100vh;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+main {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

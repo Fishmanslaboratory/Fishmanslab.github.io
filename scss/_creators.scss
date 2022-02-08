@@ -54,4 +54,27 @@
     }
   }
 
+ 
+
+  
+}
+
+@media screen and (max-width : 600px){
+   .user-card-container{
+    // background-color: lemonchiffon;
+    margin-top: 25% ;
+    gap: 30px !important;
+    padding: 0 2%;
+
+
+    .name{
+    font-size: 1rem !important;
+  }
+
+  .des{
+  font-size: 0.8rem;
+  width: 90%; 
+  padding: 0 10%;
+  }
+  }
 }

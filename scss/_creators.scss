@@ -11,7 +11,7 @@
     transform: translateY(-170px);
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 80px;  
   }
 
   .user-card {
@@ -44,4 +44,14 @@
       }
     }
   }
+}
+
+
+@media screen and (max-width: 1000px) {
+  #creators {
+    h2{
+      font-size: 5rem;
+    }
+  }
+
 }

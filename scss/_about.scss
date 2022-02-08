@@ -92,6 +92,8 @@
     }
   }
 
+  
+
   .biohazard {
     margin-top: 100px;
     position: relative;
@@ -128,4 +130,14 @@
       }
     }
   }
+}
+
+
+
+@media screen and (max-width : 600px) {
+
+  #pyramid-img{
+    display: none;
+  }
+  
 }

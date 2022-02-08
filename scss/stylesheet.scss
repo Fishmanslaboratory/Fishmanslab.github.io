@@ -25,3 +25,29 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+@media  screen and (max-width : 600px) {
+  html{
+    width: 100vw;
+  }
+  body{
+    width: 100%;
+  }
+
+  main{
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  html,body{
+    overflow-x: hidden !important;
+}
+
+  // .navbar-brand{
+  //   background-color: lightblue;
+  //   font-size: 0.8rem;
+  //   width: 30%;
+  // }
+  
+}

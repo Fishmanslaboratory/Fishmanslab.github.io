@@ -43,8 +43,34 @@ footer {
 
 @media screen and (max-width : 600px){
   footer{
+    padding: 5%;
+
     .email{
-      font-size: 1rem;
+      font-size: 0.9rem;
+    }
+
+    h2{
+      font-size: 1.5rem;
+    }
+
+    .footer-bottom{
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      p{
+        width: 100%;
+      }
+
+      .social-links{
+        // background-color: aqua;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding: 5% 0;
+
+        a{
+          padding: 0 3% 0 0;
+        }
+      }
     }
   }
 }

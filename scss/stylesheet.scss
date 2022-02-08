@@ -26,6 +26,49 @@ main {
   background-size: cover;
 }
 
+.sm-links{
+  // background-color: aqua;
+  min-width: 20%;
+}
+
+.top-box{
+  background-color: $black;
+  padding: 10px;  
+  border-radius: 5px;
+  border: 1px solid white;
+  z-index: 2;
+  transition-duration: 0.3s;
+}
+
+.bottom-box{
+  border: 2px solid white;
+  // border-right: 0;
+  border-radius: 5px;
+  height: 48px;
+  width: 35px;
+  position: relative;
+  top: 5px;
+  right: 38px;
+  z-index: 1;
+  transition-duration: 0.3s;
+  visibility: hidden;
+}
+
+.sm-link-btn{
+  transition-duration: 0.3s;
+  min-width: 30%;
+}
+
+.sm-link-btn:hover .bottom-box{
+  visibility: visible;
+}
+
+.sm-link-btn:hover .top-box{
+  transform: translate(0.25rem,-0.25rem);
+  background-color: #fff;
+}
+
+
 
 @media  screen and (max-width : 600px) {
   html{

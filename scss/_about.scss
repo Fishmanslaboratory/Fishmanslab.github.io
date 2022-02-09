@@ -1,3 +1,7 @@
+.about-bg{
+  height: 100vh;
+}
+
 .about-div1 {
   text-align: center;
   font-size: 45px;
@@ -6,6 +10,7 @@
   text-transform: capitalize;
   letter-spacing: 1px;
   padding-top: 100px;
+  
 }
 
 .about-text{
@@ -136,6 +141,12 @@
         word-spacing: 1px;
       }
     }
+  }
+}
+
+.about-bg{
+  video{
+    width: 300px;
   }
 }
 

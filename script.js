@@ -1,11 +1,15 @@
-let bioImgState = true;
+var myVideo = document.getElementById('myVideo');
 
-document.getElementById("biohazard-btn").addEventListener("click", () => {
-  if (bioImgState) {
-    document.getElementById("pyramid-img").style.filter = "unset";
-    bioImgState = false;
-  } else {
-    document.getElementById("pyramid-img").style.filter = "blur(13px)";
-    bioImgState = true;
-  }
-});
+VisSense.VisMon.Builder(VisSense(myVideo))
+.on('fullyvisible', function() {
+    myVideo.play();
+})
+.on('hidden', function() {
+    myVideo.pause();
+})
+.build()
+.start();
+
+
+
+

@@ -44,14 +44,19 @@
 
   <!-- Custom css -->
   <!-- <link rel="stylesheet" href="styles.css"> -->
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="/css/stylesheet.min.css" />
+
+
+
 </head>
 
 <body>
   <main>
     <!-- HEADER -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark">
+      <nav class="navbar  navbar-expand-md q navbar-dark bg-transparent">
         <div class="container-fluid navbar-wrapper">
           <a class="navbar-brand" href="#">
             <p>fishman’s</p>
@@ -168,7 +173,10 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-4">
-
+            <div class="" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="400"
+              data-aos-easing="ease-in-out">
+              <video src="img/export.mp4" autoplay loop id="myVideo"></video>
+            </div>
           </div>
           <div class="col-sm-12 col-md-1"></div>
           <div class="col-sm-12 col-md-7 about-text">
@@ -198,25 +206,20 @@
       <div class="row phase-card-row">
         <div class="phase-card">
           <p class="phase">Phase I</p>
-          <img class="phase-heading" src="img/roadmap/heading1.png" alt="" />
           <p class="phase-paragraph">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua.
           </p>
-          <img class="fish" src="img/roadmap/roadmap-1.png" alt="" />
         </div>
         <div class="phase-card">
           <p class="phase">Phase II</p>
-          <img class="phase-heading" src="img/roadmap/heading2.png" alt="" />
           <p class="phase-paragraph">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua.
           </p>
-          <img class="fish" src="img/roadmap/roadmap-2.png" alt="" />
         </div>
         <div class="phase-card">
           <p class="phase">Phase III</p>
-          <img class="phase-heading" src="img/roadmap/heading3.png" alt="" />
           <p class="phase-paragraph">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua.
@@ -224,16 +227,14 @@
         </div>
         <div class="phase-card">
           <p class="phase">Phase IV</p>
-          <img class="phase-heading" src="img/roadmap/heading4.png" alt="" />
           <p class="phase-paragraph">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua.
           </p>
-          <img class="fish" src="img/roadmap/roadmap-3.png" alt="" />
         </div>
       </div>
 
-      <div class="biohazard">
+      <!-- <div class="biohazard">
         <div class="img-container">
           <img src="img/roadmap/roadmap-main.png" id="pyramid-img" alt="" />
         </div>
@@ -242,6 +243,8 @@
           <p>PRESS AND HOLD TO REVEAL</p>
         </div>
       </div>
+    </section> -->
+
     </section>
 
     <section id="creators">
@@ -310,10 +313,16 @@
         </div>
       </div>
     </footer>
-    </section>
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vissense/0.10.0/vissense.min.js"
+    integrity="sha512-2ES1bMYVtDkWzlzuUr6EkA0WZ4Vhg/cYBCBBlr0QtKAd12X9EWO1/JwId+9AVQnX7xu684o+7BElKL9HLd/YfQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

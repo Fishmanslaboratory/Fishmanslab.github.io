@@ -24,3 +24,37 @@
 .symbol{
 	font-size: 5rem;
 }
+
+@media screen and (max-width : 600px) {
+	#formula{
+		flex-direction: column;
+		h1{
+			font-size: 3rem;
+		}
+	}
+	.num-des{
+		font-size: 1.5rem;
+	}
+	.symbol{
+		text-align: center;
+		font-size: 3rem;
+	}
+}
+
+@media screen and (max-width : 970px) and (min-width : 600px){
+	#formula{
+		h1{
+			font-size: 2.5rem;
+		}
+	}
+
+	.num-des{
+		font-size: 1.3rem;
+	}
+
+	.symbol{
+		font-size: 2rem;
+		display: flex;
+		align-items: center;
+	}
+}

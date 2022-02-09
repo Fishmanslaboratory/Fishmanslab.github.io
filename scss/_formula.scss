@@ -1,0 +1,26 @@
+#formula{
+	background-color: #FF7527;
+	display: flex;
+	flex-direction: row;
+	padding: 5% 10%;
+	justify-content: space-evenly;
+}
+
+.number-card-1{
+	h1{
+		font-size: 4rem;
+		font-weight: 900;
+	}
+}
+
+.num-des{
+	color: transparent;
+	font-size: 1.6rem;
+	-webkit-text-stroke: 1px #ffffff;
+	font-weight: 900;
+}
+
+
+.symbol{
+	font-size: 5rem;
+}

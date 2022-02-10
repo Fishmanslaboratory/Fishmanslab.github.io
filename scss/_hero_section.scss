@@ -1,6 +1,7 @@
 .hero_section {
   height: 100vh;
   width: 100%;
+  position: relative;
 
   video {
     height: 100vh;
@@ -9,6 +10,10 @@
   }
 }
 
+header{
+  background-color: transparent;
+  position: absolute;
+}
 
 // .navbar.transparent.navbar-inverse .navbar-inner {
 //     border-width: 0px;
@@ -34,18 +39,22 @@
 
 .navbar-wrapper {
   display: flex;
-}
-
-.navbar-collapse {
-  display: flex;
-  justify-content: center !important;
-}
-
-.navbar-nav {
+  // background-color: aqua;
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
+
+
+
+.navbar{
+  background-color: blueviolet;
+  // width: 100vw;
+}
+
+header{
+  // background-color: aquamarine;
+  width: 100%;
+}
+
 
 .sm-links {
   a {

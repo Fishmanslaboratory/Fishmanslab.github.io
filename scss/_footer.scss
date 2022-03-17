@@ -94,6 +94,10 @@ footer {
       right: 5px;
       margin-bottom: 10px;
       transform: scale(0.9);
+
+      svg {
+        fill: red !important;
+      }
     }
   }
 }

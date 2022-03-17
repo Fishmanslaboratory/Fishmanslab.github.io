@@ -1,65 +1,163 @@
 #creators {
-  background-color: #000;
-
-  padding: 50px 0 0 0;
-  h2 {
-    color: transparent;
-    font-size: 12rem;
-    font-family: Outfit, sans-serif;
-    font-weight: 900;
-    color: #ffffff;
-  }
-
-  .creators-text {
-    width: 40%;
-  }
-  // .stroke{
-  //   position: relative;
-  //   z-index: 1;
-  //   bottom: 230px;
-  //   right: 10px;
-  //   color: transparent;
-  //    -webkit-text-stroke: 1.5px white;
-  // }
-
-  .user-card-container {
-    transform: translateY(-100px);
-    display: flex;
-    justify-content: center;
-    gap: 43px;
-  }
-
-  .user-card {
-    // width: 41%;
-    max-width: 400px;
-    color: #ffffff;
-    text-align: center;
-
-    .profile {
-      width: 90%;
-    }
-
-    .name {
-      font-weight: 700;
-      font-size: 1.7rem;
-    }
-
-    .des {
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    .d-flex {
-      justify-content: center;
-
-      a {
-        margin: 20px 17px 0 17px;
-
+    background-color: #000;
+    // padding: 50px 0 0 0;
+    .creator-img-wrap {
+        position: relative;
         img {
-          height: 19px;
+            height: 300px;
+            // position: absolute;
         }
-      }
+
+        .creator-img {
+            z-index: 3;
+            display: none;
+        }
+
+        .creator-avatar:hover > .creator-img {
+            display: block;
+        }
+
+        .creator-avatar {
+            z-index: 1;
+        }
+
+        /*
+      Rollover Image
+     */
+        .figure {
+            position: relative;
+            width: 360px; /* can be omitted for a regular non-lazy image */
+            max-width: 100%;
+        }
+        .figure img.image-hover {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .figure:hover img.image-hover {
+            opacity: 1;
+        }
     }
-  }
+    .team {
+        h3 {
+            // -webkit-text-stroke: 1px #fff;
+            // font-family: proxima_nova, sans-serif !important;
+            // background-color: #fff;
+            font-weight: 800;
+            color: #fff;
+            // color: rgba(255, 255, 255, 0.9);
+            font-size: 3rem;
+        }
+    }
+
+    .team-row {
+        margin: 50px 0;
+        max-width: 1000px;
+    }
+    .team-card {
+        text-align: center;
+        margin: 20px 0;
+
+        h4 {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    // .stroke{
+    //   position: relative;
+    //   z-index: 1;
+    //   bottom: 230px;
+    //   right: 10px;
+    //   color: transparent;
+    //    -webkit-text-stroke: 1.5px white;
+    // }
+
+    .creators-text {
+        width: 40%;
+        transform: translateY(100px);
+    }
+
+    .user-card-container {
+        // transform: translateY(-100px);
+        display: flex;
+        justify-content: center;
+
+        .user-card {
+            // width: 41%;
+            max-width: 400px;
+            color: #ffffff;
+            text-align: center;
+            // background-color: aqua;
+            // background-color: rgba(255, 255, 255, 0.4);
+
+            // .cof-1 {
+            //     // background-color: lawngreen;
+            //     height: 200px;
+            //     width: 200px;
+            //     background-image: url("/img/creators/chappapa.png");
+            // }
+
+            &:first-child {
+                margin-right: 43px;
+            }
+
+            &:hover {
+                .big-img {
+                    visibility: unset;
+                    opacity: 100%;
+                }
+            }
+
+            .big-img {
+                position: absolute;
+                // top: 50%;
+                // left: 50%;
+                // transform: translate(-50%, -50%);
+                visibility: hidden;
+                opacity: 0;
+                transition-duration: 500ms;
+                z-index: 2;
+                // width: 450px;
+                height: 30vh;
+                border-radius: 8px;
+            }
+
+            .profile {
+                width: 90%;
+                z-index: 1;
+            }
+
+            .name {
+                font-weight: 700;
+                font-size: 1.7rem;
+            }
+
+            .des {
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+            .d-flex {
+                justify-content: center;
+
+                a {
+                    margin: 20px 17px 0 17px;
+
+                    img {
+                        height: 19px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // @media screen and (min-width : 600px){
@@ -75,38 +173,45 @@
 // }
 
 @media screen and (max-width: 600px) {
-  #creators {
-    background-color: #000 !important;
+    #creators {
+        background-color: #000 !important;
 
-    .user-card-container {
-      padding: 50px;
-      transform: unset;
-      flex-direction: column;
-      // background-color: lightblue;
-      //  background-color: aqua;
-      // flex-direction: column;
-      // gap: 0px !important;
+        .user-card-container {
+            padding: 50px 0;
+            transform: unset;
+            flex-direction: column;
+            overflow-x: hidden;
+            // background-color: lightblue;
+            //  background-color: aqua;
+            // flex-direction: column;
+            // gap: 0px !important;
+        }
+
+        .user-card {
+            &:first-child {
+                margin-right: 0 !important;
+            }
+        }
     }
-  }
 
-  // .profile {
-  //   transform: scale(0.5);
-  //   margin: 10px 0 !important;
-  // }
-  // .user-card {
-  //   padding: 0 5%;
-  // }
-  // p.name {
-  //   font-size: 0.5rem;
-  //   margin: 0;
-  //   position: relative;
-  //   bottom: 80px;
-  // }
-  // p.des {
-  //   padding: 0 10%;
-  //   position: relative;
-  //   bottom: 70px;
-  // }
+    // .profile {
+    //   transform: scale(0.5);
+    //   margin: 10px 0 !important;
+    // }
+    // .user-card {
+    //   padding: 0 5%;
+    // }
+    // p.name {
+    //   font-size: 0.5rem;
+    //   margin: 0;
+    //   position: relative;
+    //   bottom: 80px;
+    // }
+    // p.des {
+    //   padding: 0 10%;
+    //   position: relative;
+    //   bottom: 70px;
+    // }
 }
 
 //  @media screen and (max-width : 700px){}

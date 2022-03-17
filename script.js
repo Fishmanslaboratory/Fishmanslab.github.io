@@ -1,63 +1,71 @@
 var odometer = {
-  init: function () {
-    var $odometer = $(".odometer");
+    init: function () {
+        var $odometer = $(".odometer");
 
-    $odometer.each(function () {
-      var $this = $(this),
-        animationDuration = $this.data("animation-duration") || 1000,
-        animationDelayStart = $this.data("animation-delay-start") || 0,
-        animationEasing = $this.data("animation-easing") || "easeOutCubic",
-        animationLoop = $this.data("animation-loop") || false,
-        odometerValue = $this.data("animation-value").toString(),
-        // fraction = $this.hasClass('last_value_fraction'),
-        colCount = odometerValue.length - 1;
+        $odometer.each(function () {
+            var $this = $(this),
+                animationDuration = $this.data("animation-duration") || 1000,
+                animationDelayStart = $this.data("animation-delay-start") || 0,
+                animationEasing =
+                    $this.data("animation-easing") || "easeOutCubic",
+                animationLoop = $this.data("animation-loop") || false,
+                odometerValue = $this.data("animation-value").toString(),
+                // fraction = $this.hasClass('last_value_fraction'),
+                colCount = odometerValue.length - 1;
 
-      // if (fraction)
-      // 	colCount -= 1;
+            // if (fraction)
+            // 	colCount -= 1;
 
-      for (i = 0; i < colCount; i++) {
-        if (i % 3 == 0 && i != 0) $this.prepend('<span class="seperator"></span>');
+            for (i = 0; i < colCount; i++) {
+                if (i % 3 == 0 && i != 0)
+                    $this.prepend('<span class="seperator"></span>');
 
-        $this.prepend('<div class="col"><div class="col_contents"></div></div>');
-      }
+                $this.prepend(
+                    '<div class="col"><div class="col_contents"></div></div>'
+                );
+            }
 
-      $this.find(".col_contents").each(function (index) {
-        var $this = $(this),
-          translationValue = odometerValue.slice(index, index + 1);
+            $this.find(".col_contents").each(function (index) {
+                var $this = $(this),
+                    translationValue = odometerValue.slice(index, index + 1);
 
-        // if (fraction) {
-        // 	if (index === colCount - 1) {
-        // 		translationValue -= 1; // offset value by -1 because if the value is 0 there shouldn't be any translation
-        // 		translationValue += odometerValue.slice(index + 1, index + 2) / 10;
-        // 	}
-        // }
+                // if (fraction) {
+                // 	if (index === colCount - 1) {
+                // 		translationValue -= 1; // offset value by -1 because if the value is 0 there shouldn't be any translation
+                // 		translationValue += odometerValue.slice(index + 1, index + 2) / 10;
+                // 	}
+                // }
 
-        for (j = 0; j < 10; j++) {
-          $this.append('<div class="col_number">' + j + "</div>");
-        }
+                for (j = 0; j < 10; j++) {
+                    $this.append('<div class="col_number">' + j + "</div>");
+                }
 
-        var columnHeight = $this.height(),
-          numberHeight = columnHeight / 10;
+                var columnHeight = $this.height(),
+                    numberHeight = columnHeight / 10;
 
-        $this.delay(animationDelayStart).velocity(
-          {
-            translateY: -Math.floor(translationValue * numberHeight),
-          },
-          {
-            duration: animationDuration,
-            easing: animationEasing,
-            loop: animationLoop,
-          }
-        );
+                $this.delay(animationDelayStart).velocity(
+                    {
+                        translateY: -Math.floor(
+                            translationValue * numberHeight
+                        ),
+                    },
+                    {
+                        duration: animationDuration,
+                        easing: animationEasing,
+                        loop: animationLoop,
+                    }
+                );
 
-        animationDuration = animationDuration + 250;
-      });
+                animationDuration = animationDuration + 250;
+            });
 
-      // console.log("Helllloooo");
-      let lastNum = document.querySelector(".col:last-child  .col_number");
-      // console.log(lastNum);
-    });
-  },
+            // console.log("Helllloooo");
+            let lastNum = document.querySelector(
+                ".col:last-child  .col_number"
+            );
+            // console.log(lastNum);
+        });
+    },
 };
 
 let fishVid = document.getElementById("fish-vid");
@@ -87,35 +95,41 @@ let fishShift = 480;
 // console.log(hscroll)
 // odoo.default({ el:'.js-odoo', from: '00000', to: '12121', animationDelay: 1000 });
 
-let width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-let height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+let width =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+let height =
+    window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.body.clientHeight;
 
 // console.log(width, height);
 
 // 1196 to 605 ==> decrease by 10%
 
 if (width < 1196) {
-  if (fishShift === 480) {
-    fishShift = fishShift - 100;
-    // console.log('thrth');
-  }
-  // document.querySelector('.about-text').style.backgroundColor = "blue";
-  // console.log("yes this is workin");
+    if (fishShift === 480) {
+        fishShift = fishShift - 100;
+        // console.log('thrth');
+    }
+    // document.querySelector('.about-text').style.backgroundColor = "blue";
+    // console.log("yes this is workin");
 }
 
 if (width < 600) {
-  if (fishShift != 200) {
-    fishShift = 400;
-  }
+    if (fishShift != 200) {
+        fishShift = 400;
+    }
 }
 
 window.addEventListener("resize", () => {
-  if (width < 1196 && width > 605) {
-    if (fishShift === 480) {
-      fishShift = fishShift - 100;
-      // console.log("thrth");
+    if (width < 1196 && width > 605) {
+        if (fishShift === 480) {
+            fishShift = fishShift - 100;
+            // console.log("thrth");
+        }
     }
-  }
 });
 
 // gsap.to(line1,{
@@ -143,19 +157,19 @@ fishDiv = document.querySelector(".extra-video-wrapper");
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(fishDiv, {
-  scrollTrigger: {
-    trigger: fishDiv,
-    toggleActions: "play pause resume none",
-    start: "-70% 100px",
-  },
-  onEnter: () => {
-    // console.log(fishVid.play);
-    // fishVid.autoplay = true;
-    fishVid.play();
-    // fishVid.load();
-  },
-  x: fishShift,
-  duration: 3,
+    scrollTrigger: {
+        trigger: fishDiv,
+        toggleActions: "play pause resume none",
+        start: "-70% 100px",
+    },
+    onEnter: () => {
+        // console.log(fishVid.play);
+        // fishVid.autoplay = true;
+        fishVid.play();
+        // fishVid.load();
+    },
+    x: fishShift,
+    duration: 3,
 });
 
 // ScrollTrigger.create({
@@ -166,28 +180,28 @@ gsap.to(fishDiv, {
 // })
 
 ScrollTrigger.create({
-  trigger: ".odometer",
-  toggleActions: "play none none none",
-  start: "100px bottom",
+    trigger: ".odometer",
+    toggleActions: "play none none none",
+    start: "100px bottom",
 
-  onEnter: () => {
-    if (firstTimeOdomoeter === false) {
-      odometer.init();
-      firstTimeOdomoeter = true;
-    }
-    // console.log("entered");
-  },
-  // onLeave : () => {
-  // 	console.log('lefttt');
-  // },
-  onEnterBack: () => {
-    // document.querySelector('.js-odoo svg g').style.fill = '#fff';
-    // console.log(document.querySelector('.js-odoo svg g'));
-    // console.log('enter back');
-  },
-  // onLeaveBack : () => {
-  // 	console.log('leaving all way');
-  // }
+    onEnter: () => {
+        if (firstTimeOdomoeter === false) {
+            odometer.init();
+            firstTimeOdomoeter = true;
+        }
+        // console.log("entered");
+    },
+    // onLeave : () => {
+    // 	console.log('lefttt');
+    // },
+    onEnterBack: () => {
+        // document.querySelector('.js-odoo svg g').style.fill = '#fff';
+        // console.log(document.querySelector('.js-odoo svg g'));
+        // console.log('enter back');
+    },
+    // onLeaveBack : () => {
+    // 	console.log('leaving all way');
+    // }
 });
 
 // const hamburger = document.querySelector(".hamburger");
@@ -202,12 +216,50 @@ ScrollTrigger.create({
 navLinkItems = document.querySelectorAll(".nav ul li");
 
 navLinkItems.forEach((navLinkItem) => {
-  navLinkItem.addEventListener("click", () => {
-    document.querySelector(".menu-icon").toggleAttribute("checked");
-  });
+    navLinkItem.addEventListener("click", () => {
+        document.querySelector(".menu-icon").toggleAttribute("checked");
+    });
 });
 
 function closeMenu() {
-  // console.log("menu closed");
-  document.getElementById("menu-icon").checked = false;
+    // console.log("menu closed");
+    document.getElementById("menu-icon").checked = false;
 }
+
+// let controller = new ScrollMagic.Controller();
+// let timeline = new TimelineMax();
+
+// timeline
+//     .to(".gratitude-cc", 2, { y: -300 })
+//     .to(".gratitude-dollar", 2, { y: -200 }, "-=2")
+//     .to(".gratitude-eth", 2, { y: -200 }, "-=2")
+//     .to(".gratitude-fish", 2, { y: -50 }, "-=2")
+//     .to(".roadmap-ele-3", 2, { top: "0%" }, "-=2");
+
+timeline
+    .to(".gratitude-cc", 1, { y: -300 })
+    .to(".gratitude-dollar", 1, { y: -200 }, "-=1")
+    .to(".gratitude-eth", 1, { y: -200 }, "-=1")
+    .to(".gratitude-fish", 1, { y: -50 }, "-=1")
+    .to(".roadmap-ele-3", 1, { top: "0%" }, "-=1");
+
+// timeline
+//   .fromTo(".gratitude-cc", { y: 0 }, { y: -200, duration: 1 })
+//   .fromTo(".gratitude-dollar", { y: 0 }, { y: -200, duration: 1 }, "-=1")
+//   .fromTo(".gratitude-eth", { y: 0 }, { y: -200, duration: 1 }, "-=1")
+//   .fromTo(".gratitude-fish", { y: 0 }, { y: -100, duration: 1 }, "-=1");
+// .fromTo(".gratitude-dollar", 1, { y: -200 }, "-=1")
+// .fromTo(".gratitude-eth", 1, { y: -200 }, "-=1")
+// .fromTo(".gratitude-fish", 1, { y: -50 }, "-=1")
+// .fromTo(".roadmap-ele-3", 1, { top: "0%" }, "-=1");
+
+let scene = new ScrollMagic.Scene({
+    triggerElement: "#gratitude-row",
+    duration: "100%",
+    triggerHook: 0,
+})
+    .setTween(timeline)
+    .setPin("#gratitude-row")
+    .addTo(controller);
+
+// creator_img_1 = document.getElementById("")

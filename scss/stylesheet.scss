@@ -8,6 +8,7 @@
 @import "./faq";
 @import "./navbar";
 @import "./roadmap";
+// @import "./pr-roadmap";
 @import "./footer";
 
 // Global Styles
@@ -25,111 +26,156 @@
 // update the favicon
 
 // PRELOADER
-#loading {
-  position: fixed;
 
-  width: 100%;
-  height: 100vh;
-  background: #000000 url("../img/Loader.gif") no-repeat center;
-  background-size: 75px 75px;
-  z-index: 9999;
+#loading {
+    position: fixed;
+
+    width: 100%;
+    height: 100vh;
+    background: #000000 url("../img/Loader.gif") no-repeat center;
+    background-size: 75px 75px;
+    z-index: 9999;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  width: 100%;
-  font-family: Outfit, sans-serif;
-  overflow-x: hidden;
+    width: 100%;
+    font-family: Outfit, sans-serif;
+    overflow-x: hidden;
 }
 
 main {
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .sm-links {
-  // background-color: aqua;
-  // min-width: 10%;
+    // background-color: aqua;
+    // min-width: 10%;
 }
 
 .top-box {
-  background-color: $black;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid white;
-  z-index: 2;
-  transition-duration: 0.3s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-color: $black;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid white;
+    z-index: 2;
+    transition-duration: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottom-box {
-  border: 2px solid white;
-  // border-right: 0;
-  border-radius: 8px;
-  height: 48px;
-  width: 50px;
-  position: relative;
-  top: 4px;
-  right: 52px;
-  z-index: 1;
-  transition-duration: 0.3s;
-  // visibility: hidden;
+    border: 2px solid white;
+    // border-right: 0;
+    border-radius: 8px;
+    height: 48px;
+    width: 50px;
+    position: relative;
+    top: 4px;
+    right: 52px;
+    z-index: 1;
+    transition-duration: 0.3s;
+    // visibility: hidden;
 }
 
 // .opensea{
 //   padding: 10px 11px;
 // }
 
-
-
 .sm-link-btn {
-  transition-duration: 0.3s;
-  padding: 0;
-  margin: 0;
-  max-width: 100px;
+    transition-duration: 0.3s;
+    padding: 0;
+    margin: 0;
+    max-width: 100px;
 }
 
 .sm-link-btn:hover .bottom-box {
-  visibility: visible;
-  cursor: pointer;
+    visibility: visible;
+    cursor: pointer;
 }
 
 .sm-link-btn:hover .top-box {
-  transform: translate(+0.23rem, -0.23rem);
-  cursor: pointer;
+    transform: translate(+0.23rem, -0.23rem);
+    cursor: pointer;
 }
 
 .sm-link-btn:hover .discord {
-  background: #5865f2;
-  cursor: url("data:image/svg+xml;utf-8, <svg xmlns = 'http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px'><text y='50%'>🔒</text></svg>"),
-    auto;
+    background: #5865f2;
+    cursor: url("data:image/svg+xml;utf-8, <svg xmlns = 'http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px'><text y='50%'>🔒</text></svg>"),
+        auto;
 }
 
 .sm-link-btn:hover .twitter {
-  background: #00acee;
+    background: #00acee;
 }
 
 .sm-link-btn:hover .instagram {
-  background: #e1306c;
+    background: #e1306c;
 }
 
 .sm-link-btn:hover .opensea {
-  background: #2081e2;
+    background: #2081e2;
 }
 
 .top-box svg {
-  transform: scale(0.9);
+    transform: scale(0.9);
 }
 
+.staking-formuale {
+    border: 1px solid white;
+    max-width: 380px;
+    // background-color: #2081e2;
+    border-radius: 8px;
+    // img {
+    //     max-width: 380px !important;
+    // }
+    .staking-formuale-imgg {
+        // width: 380px !important;
+        width: 90%;
+    }
+}
+
+// .staking-formuale::after {
+//     content: " ";
+//     position: relative;
+//     border: 1px solid #ffffff;
+//     border-radius: 8px;
+//     top: 10px;
+//     bottom: 40px;
+//     width: 380px;
+//     height: 400px;
+//     background-color: #e1306c;
+// }
+
+// .empty-box {
+//     width: 380px;
+//     height: 300px;
+//     background-color: #2081e2;
+//     position: relative;
+//     bottom: ;
+// }
+// .staking-formulae-wrap::after {
+//     content: "";
+//     position: relative;
+
+//     // top: 7px;
+//     // left: -7px;
+//     // z-index: -10;
+//     width: 380px;
+//     height: 130px;
+
+//     border: 1px solid #fff;
+//     border-radius: 7px;
+// }
 // .sm-link-btn:hover .top-box svg{
 //   // background-color: aqua;
 //   // filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
@@ -137,16 +183,16 @@ main {
 // }
 
 @media screen and (max-width: 600px) {
-  html {
-    width: 100vw;
-  }
-  body {
-    width: 100%;
-  }
+    html {
+        width: 100vw;
+    }
+    body {
+        width: 100%;
+    }
 
-  // .navbar-brand{
-  //   background-color: lightblue;
-  //   font-size: 0.8rem;
-  //   width: 30%;
-  // }
+    // .navbar-brand{
+    //   background-color: lightblue;
+    //   font-size: 0.8rem;
+    //   width: 30%;
+    // }
 }
